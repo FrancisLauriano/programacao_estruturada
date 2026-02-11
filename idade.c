@@ -12,7 +12,7 @@ int main(){
     scanf("%d", &anoAtual);
 
     idade = anoAtual - anoNascimento;
-    printf("Sua idade é: %d\n", idade);
+    printf("\nSua idade é: %d anos", idade);
 
     return 0;
 }
