@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 float calcularImc(float p, float a);
+char clasificacaoImc(float i);
 
 int main(){
     float peso, altura, imc;
@@ -18,6 +19,11 @@ int main(){
     return 0;
 }
 
+char classificacaoImc(float i){
+    if (i >= 18.00 && i <= 24.99) {
+        return "Eutrofico";
+    }else if(i >=) 25 e < 30)
+}
 
 float calcularImc(float p, float a) {
     return p / (a*a);
