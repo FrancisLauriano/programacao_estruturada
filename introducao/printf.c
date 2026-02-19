@@ -7,11 +7,11 @@ int main(){
 	
 	printf("Valor decimal com duas casas: %.2f.\n", 3.14141564678);
 	
-	/* Quando usar apenas um caracter (char), o caracter deverá está dentro de aspas simples (''):*/
+	/* Quando usar apenas um caracter (char), o caracter deverï¿½ estï¿½ dentro de aspas simples (''):*/
 	printf("Valor char (um caracter): %c.\n", 'F');
 	
-	/* Textos (string) deverá ser escrito dentro de aspas duplas (""): */
-	printf("Valor string: %s.\n", "Francis");
+	/* Textos (string) deverï¿½ ser escrito dentro de aspas duplas (""): */
+	printf("Valor string: %s.\n", "Francis.\n");
 	
 	return 0;
 	
