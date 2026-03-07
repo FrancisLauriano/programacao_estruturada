@@ -1,6 +1,20 @@
 #include <stdio.h>
 
+void inseriNumero(int nums[], int tam);
+int somaNumeros(int nums[], int tam);
+
 int main(){
+    int num1, num2, tamanho, soma;
+
+    printf("Quantos numeros?\n");
+    scanf("%d", &tamanho);
+
+    int numeros[tamanho];
+
+    inseriNumero(numeros, tamanho);
+    soma = somaNumeros(numeros, tamanho);
+
+    printf("Soma é: %d\n", soma);
 
     return 0;
 }
@@ -20,7 +34,7 @@ void inseriNumero(int nums[], int tam){
 
     for(i = 0; tam > i; i += 1){
         printf("Digite %d° número:\n", i+1);
-        scanf("%d", nums[i]);
+        scanf("%d", &nums[i]);
     }
 
 }
