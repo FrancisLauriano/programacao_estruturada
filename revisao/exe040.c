@@ -4,7 +4,7 @@ void inseriNumero(int nums[], int tam);
 int somaNumeros(int nums[], int tam);
 
 int main(){
-    int num1, num2, tamanho, soma;
+    int tamanho, soma;
 
     printf("Quantos numeros?\n");
     scanf("%d", &tamanho);
