@@ -65,8 +65,6 @@ void inserirNotas(double nota_1[], double nota_2[], int tam){
 }
 
 
-
-
 void calculaMediaPorAluno(double nota_1[], double nota_2[], double medias[], int tam, int p1, int p2){
     int i;
     double nota1, nota2;
@@ -90,7 +88,6 @@ double calcularMediaGeral(double medias[], int tam){
     }
     return soma_medias / tam;
 }
-
 
 
 void imprimirNotasMedia(double nota_1[], double nota_2[], double medias[], int tam, double med_geral){
