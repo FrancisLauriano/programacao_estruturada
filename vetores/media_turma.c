@@ -3,6 +3,8 @@
 #define TAMANHO_LISTA 30
 #define PESO_1 2
 #define PESO_2 3
+#define NOTA_MINIMA 0.00
+#define NOTA_MAXIMA 10.00
 
 
 void inserirNotas(double nota_1[], double nota_2[], int tam);
@@ -38,17 +40,33 @@ int main(){
 void inserirNotas(double nota_1[], double nota_2[], int tam){
     int i;
 
+
+
     for(i = 0; i < tam; i += 1){
-    printf("\n============= Aluno %d =============\n", i + 1);
-    printf("Insirir a 1° nota:\n");
-    scanf("%lf", &nota_1[i]);
+        printf("\n============= Aluno %d =============\n", i + 1);
 
-    printf("Insirir a 2° nota:\n");
-    scanf("%lf", &nota_2[i]);
-    }
+        do{
+            printf("Insirir a 1° nota entre %.2lf - %.2lf:\n", NOTA_MINIMA, NOTA_MAXIMA);
+            scanf("%lf", &nota_1[i]);
 
+            if(nota_1[i] < NOTA_MINIMA || nota_1[i] > NOTA_MAXIMA){
+                printf("Valor inválido! Digite nota válida!\n");
+            }
+        }while(nota_1[i] < NOTA_MINIMA || nota_1[i] > NOTA_MAXIMA);
+        
 
+        do{
+            printf("Insirir a 2° nota entre %.2lf - %.2lf:\n", NOTA_MINIMA, NOTA_MAXIMA);
+            scanf("%lf", &nota_2[i]);
+
+            if(nota_2[i] < NOTA_MINIMA || nota_2[i] > NOTA_MAXIMA){
+                printf("Valor inválido! Digite valor válido!\n");
+            }
+        }while(nota_2[i] < NOTA_MINIMA || nota_2[i] > NOTA_MAXIMA);       
+    }  
 }
+
+
 
 
 void calculaMediaPorAluno(double nota_1[], double nota_2[], double medias[], int tam, int p1, int p2){
