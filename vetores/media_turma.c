@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define TAMANHO_LISTA 3
+#define TAMANHO_LISTA 30
 #define PESO_1 2
 #define PESO_2 3
 
