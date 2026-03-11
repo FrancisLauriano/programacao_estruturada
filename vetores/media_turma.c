@@ -38,17 +38,16 @@ int main(){
 void inserirNotas(double nota_1[], double nota_2[], int tam){
     int i;
 
-    do{
-        for(i = 0; i < tam; i += 1){
-        printf("\n============= Aluno %d =============\n", i + 1);
-        printf("Insirir a 1° nota:\n");
-        scanf("%lf", &nota_1[i]);
+    for(i = 0; i < tam; i += 1){
+    printf("\n============= Aluno %d =============\n", i + 1);
+    printf("Insirir a 1° nota:\n");
+    scanf("%lf", &nota_1[i]);
 
-        printf("Insirir a 2° nota:\n");
-        scanf("%lf", &nota_2[i]);
-        }
+    printf("Insirir a 2° nota:\n");
+    scanf("%lf", &nota_2[i]);
+    }
 
-    }while(i < tam);
+
 }
 
 
