@@ -31,22 +31,6 @@ void digitarValores(int v[], int tam){
     }
 }
 
-void insertSort(int v[], int tam){
-    int i;
-
-    for(i = 1; i < tam; i += 1){
-        int aux;
-        int j = i;
-        aux = v[j];
-
-        while(j > 0 && v[j - 1] > aux){
-            v[j] = v[j - 1];
-            j -= 1;
-        }
-        v[j] = aux;
-    }
-}
-
 void imprimir(int v[], int tam){
     int i;
 
@@ -56,3 +40,26 @@ void imprimir(int v[], int tam){
     printf("\n");
 
 }
+
+
+
+
+
+
+
+void insertSort(int v[], int tam){
+    int i;
+
+    for(i = 1; i < tam; i += 1){
+        int aux;
+        int j = i;
+        aux = v[j];
+
+        while(j > 0 && aux < v[j - 1]){
+            v[j] = v[j - 1];
+            j -= 1;
+        }
+        v[j] = aux;
+    }
+}
+
