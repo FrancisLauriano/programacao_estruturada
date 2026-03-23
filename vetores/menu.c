@@ -36,7 +36,7 @@ int main(){
         printf("4. Inserir um Valor\n");
         printf("0. Sair\n");
         printf("======================\n");
-        printf("Informe uma opcao desejada entre 1 e 4:\n");
+        printf("Informe uma opcao desejada entre 0 e 4:\n");
         scanf("%d", &opcao);
 
         switch(opcao){
@@ -79,7 +79,7 @@ int tamanhoVetor(int min, int max){
         scanf("%d", &tam);
 
         if(tam < min || tam > max){
-            printf("Tamanho inválido!\n");
+            printf("Tamanho invalido!\n");
         }
     }while(tam < min || tam > max);
 
@@ -92,11 +92,11 @@ int quatidadeValores(int min, int tam){
     int i, qtd;
 
     do{
-        printf("Insirir a quantidade de valores a serem digitados entre %d e %d:\n", min, tam);
+        printf("Inserir a quantidade de valores a serem digitados entre %d e %d:\n", min, tam);
         scanf("%d", &qtd);
 
         if(qtd < min || qtd > tam){
-            printf("Quatidade Invalida!\n");
+            printf("Quantidade Invalida!\n");
         }
 
     }while(qtd < min || qtd > tam);
@@ -182,7 +182,7 @@ void pesquisarUmValor(int v[], int tam){
     if(result != -1){
         printf("Valor encontrado no indice: %d\n", result);
     }else{
-        printf("Valor nao encontrado");
+        printf("Valor nao encontrado!\n");
     }
 
 }
