@@ -104,7 +104,7 @@ int buscaSequencial(int v[], int tam, int n){
 int buscaBinaria(int v[], int tam, int n){
     int meio;
     int inicio = 0;
-    int fim = tam - 2;
+    int fim = tam - 1;
     int pos = -1;
 
     do{

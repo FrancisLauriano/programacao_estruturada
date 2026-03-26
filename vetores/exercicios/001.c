@@ -8,7 +8,14 @@ void imprimir(int v[], int tam);
 
 int main(){
 
-    int A[TAM]= {1, 0, 5, -2, -5, 7};
+    int A[TAM];
+
+    A[0] = 1;
+    A[1] = 0;
+    A[2] = 5;
+    A[3] = -2;
+    A[4] = -5;
+    A[5] = 7;
 
     printf("Imprimir antes:\n");
     imprimir(A, TAM);
@@ -35,7 +42,7 @@ void somatorio(int v[], int tam){
         }
     }
 
-    printf("Soma: %d", soma);
+    printf("Soma: %d\n", soma);
 }
 
 void atualizar(int v[], int tam){
@@ -55,7 +62,7 @@ void imprimir(int v[], int tam){
     int i;
 
     for(i = 0; i < tam; i += 1){
-        printf("%d\t", &v[i]);
+        printf("%d\t", v[i]);
     }
 
     printf("\n");
