@@ -39,6 +39,7 @@ void bubbleSort(int v[], int tam){
                 aux = v[i];
                 v[i] = v[i + 1];
                 v[i + 1] = aux;
+                troca = 1;
             }
         }
         tam -= 1;
@@ -69,7 +70,8 @@ void insertSort(int v[], int tam){
 void selectSort(int v[], int tam){
     int i, j, menor, aux;
 
-    for(i = 0; i < tam; i += 1){
+    // for(i = 0; i < tam; i += 1){
+    for(i = 0; i < tam - 1; i += 1){
         menor = i;
 
         for(j = i + 1; j < tam; j += 1){
@@ -141,7 +143,7 @@ int atualizar(int v[], int tam, int n, int n2){
 
 }
 
-// deletar
+// deletar um valor n num vetor ordenado
 int deletar(int v[], int tam, int n){
     int i, j;
 
@@ -153,8 +155,12 @@ int deletar(int v[], int tam, int n){
                 v[j] = v[j + 1];
 
             }
+
             tam -= 1;
+            i -= 1;
+
         }
+        
     }
     return tam;
 
