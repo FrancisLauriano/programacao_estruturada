@@ -595,5 +595,36 @@ void qtdNumerosPerfeitos(int v[], int t){
 // mmc
 
 
+// ordenar
+void ordenar(int v[], int tam){
+
+}
+
+
 // Escreva um programa que leia um numero inteiro positivo ´ n e em seguida imprima n
 // linhas do chamado Triangulo de Pascal:
+
+
+// os tam numeros impares nao repetidos
+void imparesNaoRepetidos(int v[], int tam){
+    int i = 0;
+    int qtd_impares = 0;
+    int num;
+
+
+    while(qtd_impares < tam){
+        printf("Informe um valor impar:\n");
+        scanf("%d", &num);
+
+        if(num % 2 != 0){
+            if(i > 0 && num == v[i - 1]){
+                continue;
+            }
+            v[i] = num;
+            i += 1;
+            qtd_impares += 1;
+
+            ordenar(v, tam);
+        }
+    }
+}
