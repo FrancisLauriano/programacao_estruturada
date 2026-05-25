@@ -1,0 +1,78 @@
+Acre
+385243
+4648
+Alagoas
+63112
+10012
+Amapa
+178393
+8314
+Amazonas
+123158
+4358
+Bahia
+404785
+18870
+Ceara
+95580
+14825
+Distrito Federal
+66663
+1976
+Espirito Santo
+99123
+8164
+Goias
+171981
+17559
+Maranhao
+365631
+1869
+Mato Grosso
+344254
+7515
+Mato Grosso do Sul
+425400
+18856
+Minas Gerais
+269949
+8223
+Para
+285514
+10115
+Paraiba
+474374
+1212
+Parana
+447833
+6231
+Pernambuco
+416026
+14848
+Piaui
+228389
+10105
+Rio de Janeiro
+131516
+8055
+Rio Grande do Norte
+450290
+12029
+Rio Grande do Sul
+103587
+4039
+Rondonia
+249191
+4169
+Roraima
+238208
+12270
+Santa Catarina
+366526
+9667
+Sao Paulo
+473167
+2423
+Sergipe
+432589
+16054

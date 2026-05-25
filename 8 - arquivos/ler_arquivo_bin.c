@@ -42,52 +42,50 @@
 // }
 
 
-
-
 #include <stdio.h>
-
 #define TAM 5
-#define CHAR 10
-
 
 int main(){
 
     FILE *arq;
-    char nomeArq[CHAR] = "teste.bin";
-    int num;
+    char nomeArq[] = "teste.bin";
     int status;
-
+    int num;
 
     arq = fopen(nomeArq, "rb");
 
     if(arq == NULL){
-        printf("Erro ao criar arquivo %s\n", nomeArq);
+        printf("Erro ao abrir arquivo %s\n", nomeArq);
         return 1;
     }
 
-    printf("Arquivo %s criado com sucesso\n", nomeArq);
+    printf("Arquivo aberto com sucesso\n");
 
+    status = fread(&num, sizeof(int), 1, arq);
 
     while(!feof(arq)){
-        status = fread(&num, sizeof(int), 1, arq);
 
-        if(status){
-            printf("Registro lido com sucesso: %d\n", num);
-        }else{
-            printf("Erro ao ler registro\n");
+        if(!status){
+            printf("Erro ao ler regristro\n");
+            break;
         }
 
+        printf("Registro lido com sucesso: %d\n", num);
+
         status = fread(&num, sizeof(int), 1, arq);
+
     }
+
 
     status = fclose(arq);
 
-    if(status == 0){
-        printf("Arquivo %s fechado com sucesso\n", nomeArq);
-    }else{
-        printf("Erro ao fechar o arquivo %s\n", nomeArq);
+    if(!status){
+        printf("Erro ao fechar arquivo %s\n", nomeArq);
         return 2;
     }
+
+    printf("Arquivo %s fechado com sucesso\n", nomeArq);
+
 
     return 0;
 }

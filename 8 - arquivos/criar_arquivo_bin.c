@@ -44,46 +44,51 @@
 #include <stdio.h>
 
 #define TAM 5
-#define CHAR 10
+
 
 int main(){
+
     FILE *arq;
-    char nomeArq[CHAR] = "teste.bin";
-    int num, i;
-    int status;
+    char nomeArq[] = "teste.bin";
+    int num;
+    int status, i;
+
 
     arq = fopen(nomeArq, "wb");
 
-
     if(arq == NULL){
-        printf("Erro ao abrir arquivo\n");
+        printf("Erro ao criar arquivo %s\n", nomeArq);
         return 1;
     }
 
-    printf("Arquivo %s criado com sucesso!\b", nomeArq);
+    printf("Arquivo %s criado com sucesso\n", nomeArq);
 
     for(i = 0; i < TAM; i += 1){
-        printf("Digite numero inteiro:\n");
+        printf("Digite um numero inteiro:\n");
         scanf("%d", &num);
 
         status = fwrite(&num, sizeof(int), 1, arq);
 
-        if(status){
-            printf("Registro gravado com sucesso\n");
-        }else{
-            printf("Erro na gravação do registro\n");
+
+        if(!status){
+            printf("Erro ao gravar registro\n");
             break;
         }
+
+        printf("Registro gravado com sucesso\n");
     }
+
 
     status = fclose(arq);
 
-    if(status == 0){
+        if(status){
+            printf("Erro ao fechar arquivo %s\n", nomeArq);
+            return 2;
+        }
+
         printf("Arquivo %s fechado com sucesso\n", nomeArq);
-    }else{
-        printf("Erro ao fechar arquivo %s\n", nomeArq);
-        return 2;
-    }
+
 
     return 0;
 }
+
